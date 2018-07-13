@@ -32,10 +32,10 @@ cd zoomba
 ./configure --disable-tests --disable-gui-tests 
 make 
 make install 
-md ~/.zoomba
+mkdir ~/.zoomba
 touch ~/.zoomba/zoomba.conf 
 ip=`ifconfig|xargs|awk '{print $7}'|sed -e 's/[a-z]*:/''/'`
-echo "Please Enter Your Masternodes Private Key: " 
+echo "Please Enter Your Masternodes Private Key: "
 read privkey
-echo 'rpcuser=dsfjkdsui3874djnaiksk \n rpcpassword=dskasiue98873kjeih87iakj \n rpcallowip=127.0.0.1  \n daemon=1 \n server=1  \n listen=1 \n masternode=1 \n logtimestamps=1 \n maxconnections=256 \n masternodeprivkey=$privkey \n externalIP=$ip:5330' >> /.zoomba/zoomba.conf 
+echo -e "rpcuser=dsfjkdsui3874djnaiksk\nrpcpassword=dskasiue98873kjeih87iakj\nrpcallowip=127.0.0.1\ndaemon=1\nserver=1\nlisten=1\nmasternode=1\nlogtimestamps=1\nmaxconnections=256\nmasternodeprivkey=$privkey\nexternalIP=$ip:5330" >> ~/.zoomba/zoomba.conf 
 zoombad -daemon
