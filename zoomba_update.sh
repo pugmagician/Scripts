@@ -21,17 +21,11 @@ read AGREE
 if [[ $AGREE =~ "y" ]] ; then
 sudo apt install -y unzip
 zoomba-cli stop
-wget https://github.com/zoombacoin/zoomba/releases/download/1.0.1/Zoomba_1.0.1_Linux.zip
-unzip -o Zoomba_1.0.1_Linux.zip
-echo "I could use a soda right now!"
+wget https://github.com/pugmagician/Scripts/blob/master/zoomba_update.zip
+unzip -o zoomba_update.zip
 mv -f zoombad ./../usr/local/bin
 mv -f zoomba-cli ./../usr/local/bin
-rm -rf zoomba-qt
-rm -rf Zoomba_1.0.1_Linux.zip
+rm -rf zoomba_update.zip
 zoombad -daemon
 echo -e ${GREEN}"You're wallet is now updated, you may need to restart the masternode from the Windows/MAC side now."${NC}
-echo
-echo
-echo
-echo -e ${YELLOW}"Can I get some sleep now?"${NC}
 fi
