@@ -25,7 +25,7 @@ wget https://github.com/zoombacoin/zoomba/releases/download/1.0.1/Zoomba_1.0.1_L
 unzip -o Zoomba_1.0.1_Linux.zip
 echo "I could use a soda right now!"
 mv -f zoombad ./../usr/local/bin
-mv -f zoombad ./../usr/local/bin
+mv -f zoomba-cli ./../usr/local/bin
 rm -rf zoomba-qt
 rm -rf Zoomba_1.0.1_Linux.zip
 zoombad -daemon
