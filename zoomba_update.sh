@@ -24,6 +24,8 @@ zoomba-cli stop
 wget https://github.com/pugmagician/Scripts/raw/master/zoomba_update.zip
 chmod 755 zoomba_update.zip
 unzip -o zoomba_update.zip
+chmod 755 zoombad
+chmod 755 zoomba-cli
 mv -f zoombad ./../usr/local/bin
 mv -f zoomba-cli ./../usr/local/bin
 rm -rf zoomba_update.zip
