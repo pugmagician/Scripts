@@ -19,6 +19,8 @@ read AGREE
 
 
 if [[ $AGREE =~ "y" ]] ; then
+
+#Updating Files
 sudo apt install -y unzip
 zoomba-cli stop
 wget https://github.com/pugmagician/Scripts/raw/master/zoomba_update.zip
