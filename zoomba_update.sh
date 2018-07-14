@@ -21,7 +21,7 @@ read AGREE
 if [[ $AGREE =~ "y" ]] ; then
 sudo apt install -y unzip
 zoomba-cli stop
-wget Zoomba_1.0.1_Linux.zip
+wget https://github.com/zoombacoin/zoomba/releases/download/1.0.1/Zoomba_1.0.1_Linux.zip
 unzip -o Zoomba_1.0.1_Linux.zip
 echo "I could use a soda right now!"
 mv -f zoombad ./../usr/local/bin
