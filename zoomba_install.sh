@@ -36,7 +36,7 @@ sudo mkdir ~/.zoomba
 sudo touch ~/.zoomba/zoomba.conf 
 GREEN='\033[0;32m'
 NC='\033[0m'
-echo {GREEN}"Please Enter Your Masternodes Private Key:"{NC}
+echo -e {GREEN}"Please Enter Your Masternodes Private Key:"{NC}
 read privkey
 echo -e "rpcuser=dsfjkdsui3874djnaiksk\nrpcpassword=dskasiue98873kjeih87iakj\nrpcallowip=127.0.0.1\ndaemon=1\nserver=1\nlisten=1\nmasternode=1\nlogtimestamps=1\nmaxconnections=256\nmasternodeprivkey=$privkey\nexternalIP=$(hostname  -I | cut -f1 -d' '):5330" >> ~/.zoomba/zoomba.conf 
 zoombad -daemon
