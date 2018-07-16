@@ -58,7 +58,8 @@ sudo make
 sudo make install 
 sudo mkdir ~/.primestonecore
 sudo touch ~/.primestonecore/primestone.conf 
-echo -e "rpcuser=dsfjkdsui3874djnaiksk\nrpcpassword=dskasiue98873kjeih87iakj\nrpcallowip=127.0.0.1\ndaemon=1\nserver=1\nlisten=1\nmasternode=1\nlogtimestamps=1\nmaxconnections=256\nmasternodeprivkey=$privkey\nexternalIP=$(hostname  -I | cut -f1 -d' '):19941" >> ~/.zoomba/zoomba.conf 
+echo -e "rpcuser=dsfjkdsui3874djnaiksk\nrpcpassword=dskasiue98873kjeih87iakj\nrpcallowip=127.0.0.1\ndaemon=1\nserver=1\nlisten=1\nmasternode=1\nlogtimestamps=1\nmaxconnections=256\nmasternodeprivkey=$privkey\nexternalIP=$(hostname  -I | cut -f1 -d' '):19941" >> ~/.primestonecore/primestone.conf 
 primestoned -daemon
+cd ~
 echo -e ${GREEN}"Congrats Your Masternode is Now Installed and Has Started, Please wait 5 Minutes before you start the Windows or Mac Side of your wallet to give the masternode time to sync."${NC}
 fi
