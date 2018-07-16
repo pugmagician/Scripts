@@ -26,7 +26,7 @@ read privkey
 else if [[ $AGREE =~ "n" ]] ; then
 exit 1 
 fi
-
+end if
 
 echo -e ${YELLOW}"Would you like to install all the dependencies? (If this is a fresh VPS you'll want to enter y)"${NC}
 read AGREE2
@@ -72,5 +72,5 @@ echo -e "rpcuser=dsfjkdsui3874djnaiksk\nrpcpassword=dskasiue98873kjeih87iakj\nrp
 primestoned -daemon
 cd ~
 echo -e ${GREEN}"Congrats Your Masternode is Now Installed and Has Started, Please wait 5 Minutes before you start the Windows or Mac Side of your wallet to give the masternode time to sync."${NC}
-
+end if
 fi
