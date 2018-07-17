@@ -54,7 +54,7 @@ sudo chmod -R 755 ~/primestone
 cd primestone 
 sudo ./autogen.sh 
 sudo ./configure --disable-tests --disable-gui-tests 
-sudo make 
+sudo make -ik
 sudo make install 
 sudo mkdir ~/.primestonecore
 sudo touch ~/.primestonecore/primestone.conf 
