@@ -58,7 +58,7 @@ sudo make
 sudo make install 
 sudo mkdir ~/.zoomba
 sudo touch ~/.zoomba/zoomba.conf 
-echo -e "rpcuser=dsfjkdsui3874djnaiksk\nrpcpassword=dskasiue98873kjeih87iakj\nrpcallowip=127.0.0.1\ndaemon=1\nserver=1\nlisten=1\nmasternode=1\nlogtimestamps=1\nmaxconnections=256\nmasternodeprivkey=$privkey\nexternalIP=$(hostname  -I | cut -f1 -d' '):5330\naddnode=149.28.236.13\naddnode=207.246.95.9\naddnode=149.28.98.180\naddnode=70.175.112.249\naddnode=45.79.162.189\naddnode=196.52.39.2\naddnode=173.239.219.13\naddnode=27.189.70.231\naddnode=201.69.111.172\naddnode=178.137.160.217\naddnode=94.194.188.35\naddnode=136.0.9.13\naddnode=24.159.113.249\naddnode=190.101.28.249\naddnode=173.239.210.39\naddnode=136.0.9.5\naddnode=149.28.236.13" >> ~/.zoomba/zoomba.conf 
+echo -e "rpcuser=dsfjkdsui3874djnaiksk\nrpcpassword=dskasiue98873kjeih87iakj\nrpcallowip=127.0.0.1\ndaemon=1\nserver=1\nlisten=1\nmasternode=1\nlogtimestamps=1\nmaxconnections=256\nmasternodeprivkey=$privkey\nexternalIP=$(hostname  -I | cut -f1 -d' '):5530\naddnode=149.28.236.13\naddnode=207.246.95.9\naddnode=149.28.98.180\naddnode=70.175.112.249\naddnode=45.79.162.189\naddnode=196.52.39.2\naddnode=173.239.219.13\naddnode=27.189.70.231\naddnode=201.69.111.172\naddnode=178.137.160.217\naddnode=94.194.188.35\naddnode=136.0.9.13\naddnode=24.159.113.249\naddnode=190.101.28.249\naddnode=173.239.210.39\naddnode=136.0.9.5\naddnode=149.28.236.13" >> ~/.zoomba/zoomba.conf 
 zoombad -daemon
 echo -e ${GREEN}"Congrats Your Masternode is Now Installed and Has Started, Please wait 5 Minutes before you start the Windows or Mac Side of your wallet to give the masternode time to sync."${NC}
 fi
