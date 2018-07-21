@@ -16,12 +16,12 @@ echo -e ${YELLOW}"Welcome to the Zoon Automated Install, Durring this Process Pl
 echo
 echo -e ${YELLOW}"You Will See alot of code flashing across your screen, don't be alarmed it's supposed to do that. This process can take up to an hour and may appear to be stuck, but I can promise you it's not."${NC}
 echo
-echo -e ${GREEN}"Are you sure you want to install a Zoon Masternode? type y/n followed by [ENTER]:"${NC}
+echo -e ${GREEN}"Are you sure you want to install a Zoon Node? type y/n followed by [ENTER]:"${NC}
 read AGREE
 
 
 if [[ $AGREE =~ "y" ]] ; then
-echo -e ${GREEN}"Please Enter Your Masternodes Private Key:"${NC}
+echo -e ${GREEN}"Please Enter Your Zoonode Private Key:"${NC}
 read privkey
 sudo apt-get -y update 
 sudo apt-get -y upgrade
@@ -58,7 +58,7 @@ sudo make
 sudo make install 
 sudo mkdir ~/.zoon
 sudo touch ~/.zoon/zoon.conf 
-echo -e "rpcuser=dsfjkdsui3874djnaiksk\nrpcpassword=dskasiue98873kjeih87iakj\nrpcallowip=127.0.0.1\ndaemon=1\nserver=1\nlisten=1\nmasternode=1\nlogtimestamps=1\nmaxconnections=256\nmasternodeprivkey=$privkey\nexternalIP=$(hostname  -I | cut -f1 -d' '):8328\naddnode=188.120.226.108:8328\naddnode=78.46.124.73:8328" >> ~/.zoon/zoon.conf 
+echo -e "rpcuser=dsfjkdsui3874djnaiksk\nrpcpassword=dskasiue98873kjeih87iakj\nrpcallowip=127.0.0.1\ndaemon=1\nserver=1\nlisten=1\nzoonode=1\nlogtimestamps=1\nmaxconnections=256\nzoonodeprivkey=$privkey\nexternalIP=$(hostname  -I | cut -f1 -d' '):8328\naddnode=188.120.226.108:8328\naddnode=78.46.124.73:8328" >> ~/.zoon/zoon.conf 
 zoond -daemon
-echo -e ${GREEN}"Congrats Your Masternode is Now Installed and Has Started, Please wait 5 Minutes before you start the Windows or Mac Side of your wallet to give the masternode time to sync."${NC}
+echo -e ${GREEN}"Congrats Your Zoonode is Now Installed and Has Started, Please wait 5 Minutes before you start the Windows or Mac Side of your wallet to give the masternode time to sync."${NC}
 fi
