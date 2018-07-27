@@ -29,7 +29,7 @@ unzip -o prime_linux.zip
 chmod 755 prime_linux
 cd prime_linux
 chmod 755 primestoned
-chmod 755 primestone_cli
+chmod 755 primestone-cli
 mv -f primestoned ~/../usr/local/bin
 mv -f primestone-cli ~/../usr/local/bin
 cd ~
